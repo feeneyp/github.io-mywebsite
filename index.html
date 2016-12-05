@@ -2,12 +2,78 @@
 <html class="no-js" lang="">
     <head>
 		<style>
-			
+			ul {
+			    list-style-type: none;
+			    margin: 0;
+			    padding: 0;
+			    width: 200px;
+			    background-color: #f1f1f1;
+			}
+
+			li a {
+			    display: block;
+			    color: #000;
+			    padding: 8px 16px;
+			    text-decoration: none;
+			}
+
+			li a.active {
+			    background-color: #4CAF50;
+			    color: white;
+			}
+
+			li a:hover:not(.active) {
+			    background-color: #555;
+			    color: white;
+			}
+
+
+			.element {
+			  height: 250px;
+			  width: 250px;
+			  margin: 0 auto;
+			  background-color: red;
+			  animation-name: stretch;
+			  animation-duration: 1.5s; 
+			  animation-timing-function: ease-out; 
+			  animation-delay: 0;
+			  animation-direction: alternate;
+			  animation-iteration-count: infinite;
+			  animation-fill-mode: none;
+			  animation-play-state: running;
+			}
+
+			@keyframes stretch {
+			  0% {
+			    transform: scale(.3);
+			    background-color: green;
+			    border-radius: 100%;
+			  }
+			  50% {
+			    background-color: black;
+			  }
+			  100% {
+			    transform: scale(1.5);
+			    background-color: green;
+			  }
+			}
+
+			body,
+			html {
+			  height: 100%;
+			}
+
+			body {
+			  display: flex;
+			  align-items: center;
+			  justify-content: center;
+			}
     	</style>
     </head>
     <body>
     	<ul>
-		  <li><a class="active" href="./yellowball.html">Yellow Ball</a></li>
+		  <li><a class="active" href="./index.html">Green Ball</a></li>
+		  <li><a href="./yellowball.html">Yellow Ball</a></li>
 		  <li><a href="./blueball.html">Blue Ball</a></li>
 		  <li><a href="#contact">Contact</a></li>
 		  <li><a href="#about">About</a></li>
@@ -17,4 +83,5 @@
 
     </body>
 </html>
+
 
